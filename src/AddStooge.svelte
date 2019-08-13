@@ -1,6 +1,6 @@
 <script>
   export let router = {}
-  import { navigateTo } from 'svero'
+  import { navigate } from 'svelte-routing'
   import store from './stooge-store.js'
 
   let text = '' 
@@ -12,7 +12,7 @@
       const newStooge = {name: text}
       return [...stooges, newStooge]
     })
-    navigateTo('/stooges')
+    navigate('/stooges', { replace: true })
   }
 </script>
 
@@ -20,7 +20,7 @@
 
   <h1>Add a Stooge</h1>
   <input bind:value={text}>
-  <button on:click={()=>navigateTo('/stooges')}>Cancel</button>
+  <button on:click={()=>navigate('/stooges')}>Cancel</button>
   <button on:click={()=>add()} {disabled}>Add</button>
 
 </section>

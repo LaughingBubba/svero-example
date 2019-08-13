@@ -2,7 +2,7 @@
   export let router = {}
 
   import { onDestroy } from 'svelte'
-  import { navigateTo } from 'svero'
+  import { navigate } from 'svelte-routing'
   import store from './stooge-store.js';
   
   let stooges
@@ -19,8 +19,8 @@
 
 <section>
   <h1>The Stooges</h1>
-  <button on:click={()=>navigateTo('/stooges/add')}>Add a Stooge</button>
-  <button on:click={()=>navigateTo('/')}>Home</button>
+  <button on:click={()=>navigate('/stooges/add')}>Add a Stooge</button>
+  <button on:click={()=>navigate('/')}>Home</button>
   <ul>
     {#each stooges as {name}, i}
       <li id={i}>{name}</li>
