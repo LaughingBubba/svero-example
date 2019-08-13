@@ -1,4 +1,4 @@
-# Problem with exact prop on <Route/>
+# Problem with exact prop on Route component
 
 I don't think exact pathing is working as expected.
 
