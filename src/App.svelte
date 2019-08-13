@@ -12,7 +12,7 @@
 <button on:click={()=>navigateTo('/stooges')}>Show Stooges</button>
 
 <Router>
-	<Route path='/'>
+	<Route exact path='/'>
 		<h1>Home</h1>
 	</Route>
 	<!-- <Route exact path='/stooges/add' component={AddStooge}/> -->
